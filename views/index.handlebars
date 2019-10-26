@@ -1,0 +1,15 @@
+<h1>burgers false</h1>
+
+<ul>
+
+{{#each burgers}}
+{{#unless devoured}}
+<li>
+{{id}}
+{{burger_name}}
+{{devoured}}
+</li>
+{{/unless}}
+{{/each}}
+
+</ul>
