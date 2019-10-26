@@ -1,0 +1,14 @@
+{{!-- <li>
+    {{#if devoured}}
+    <p>{{id}}</p>
+    <p>{{burger_name}}</p>
+    <p>{{devoured}}</p>
+    {{/if}}
+</li> --}}
+
+<li>
+{{id}}
+{{burger_name}}
+{{#if devoured}}true{{else}}false  <button data-id = "{{id}}">goes to true</button>
+{{/if}}
+</li>

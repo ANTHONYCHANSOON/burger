@@ -1,15 +1,41 @@
-<h1>burgers false</h1>
+<h1>burgers 0/1</h1>
+
+{{!-- <ul>
+    {{#each burgers}}
+    {{#unless devoured}}
+    <li>
+        {{#if hello}}
+        <h2>false</h2>
+        <p>ID# {{id}}</p>
+        <p>Name {{burger_name}}</p>
+        <p>Status {{devoured}}</p>
+        {{else}}
+        <h2>true</h2>
+        <p>ID# {{id}}</p>
+        <p>Name {{burger_name}}</p>
+        <p>Status {{devoured}}</p>
+        {{/if}}
+    </li>
+    {{/unless}}
+    {{/each}}
+</ul> --}}
+
+
+<h2>0</h2>
+<ul>
+  {{#each burgers}}
+  {{#unless devoured}}
+  {{> TF devoured=false}}
+  {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>1</h2>
 
 <ul>
-
-{{#each burgers}}
-{{#unless devoured}}
-<li>
-{{id}}
-{{burger_name}}
-{{devoured}}
-</li>
-{{/unless}}
-{{/each}}
-
+  {{#each burgers}}
+  {{#if devoured}}
+  {{> TF devoured=true}}
+  {{/if}}
+  {{/each}}
 </ul>
