@@ -20,9 +20,9 @@ var orm = {
             cb(result);
         });      
     },
-    updateBurger : function (New_Burger, id, cb) {
-        var querystring = "update burgers set burger_name = ?? where id = ??";
-        connection.query(querystring, [New_Burger, id], function (err, result){
+    updateBurger : function (id, cb) {
+        var querystring = "update burgers set devoured = true where id = ?";
+        connection.query(querystring, [id], function (err, result){
             if (err) throw err;
             cb(result);
         });     
