@@ -1,48 +1,42 @@
-<h1>burgers 0/1</h1>
+<h1>BURGERS/FOOD</h1>
+<br>
+<div class="container centerme">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Add Burger</h2>
+      <form class="addburger">
+        <input type="text" id="newburger" name="name">
+        <button type="submit">YUM!</button>
+      </form>
+    </div>
+  </div>
+</div>
 
-{{!-- <ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <li>
-        {{#if hello}}
-        <h2>false</h2>
-        <p>ID# {{id}}</p>
-        <p>Name {{burger_name}}</p>
-        <p>Status {{devoured}}</p>
-        {{else}}
-        <h2>true</h2>
-        <p>ID# {{id}}</p>
-        <p>Name {{burger_name}}</p>
-        <p>Status {{devoured}}</p>
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h2>TASTY</h2>
+      <ol>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> TF devoured=false}}
+        {{/unless}}
+        {{/each}}
+      </ol>
+    </div>
+    <div class="col-sm">
+      <h2>Munched</h2>
+      <ol>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> TF devoured=true}}
         {{/if}}
-    </li>
-    {{/unless}}
-    {{/each}}
-</ul> --}}
+        {{/each}}
+      </ol>
+    </div>
 
-
-<h2>0</h2>
-<ul>
-  {{#each burgers}}
-  {{#unless devoured}}
-  {{> TF devoured=false}}
-  {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>1</h2>
-
-<ul>
-  {{#each burgers}}
-  {{#if devoured}}
-  {{> TF devoured=true}}
-  {{/if}}
-  {{/each}}
-</ul>
-
-
-<h2>Add Burger</h2>
-<form class = "addburger">
-<input type = "text" id = "newburger" name="name">
-<button type = "submit">YUM!</button>
-</form>
+  </div>
+</div>

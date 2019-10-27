@@ -6,9 +6,9 @@
     {{/if}}
 </li> --}}
 
-<li>
-{{id}}
+<li></li>
+{{!-- {{id}} --}}
 {{burger_name}}
-{{#if devoured}}true{{else}}false  <button data-id = "{{id}}" class = "changestatusbutton">goes to true</button>
+{{#if devoured}}{{else}}<button data-id = "{{id}}" class = "changestatusbutton float-right">MUNCHED!</button>
 {{/if}}
 </li>

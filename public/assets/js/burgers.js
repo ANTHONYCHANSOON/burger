@@ -18,7 +18,7 @@ $(function () {
 
     $(".changestatusbutton").on("click", function (event) {
         var id = $(this).data("id");
-        alert(id);
+        //alert(id);
         var willBeDevoured = {
             devoured: true
         }
