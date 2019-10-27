@@ -1,1 +1,5 @@
 # burger
+
+In this activity. we applied our knowledge with MySQL, ORM, HandleBars and Heroku.
+
+Heroku link https://burgerhomeworkucla.herokuapp.com/
